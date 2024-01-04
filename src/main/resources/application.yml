@@ -1,0 +1,21 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+      enabled: true
+  datasource:
+    username: training
+    password: training
+    url: jdbc:oracle:thin:@192.168.2.18:1521:ORCL
+    driverClassName: oracle.jdbc.driver.OracleDriver
+  jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
+    properties:
+      hibernate:
+      format_sql: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8881
